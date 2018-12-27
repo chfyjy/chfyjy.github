@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://www.runoob.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+  <meta property="qc:admins" content="465267610762567726375">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SayWhy</title>
+<link rel="stylesheet" id="wp-block-library-css" href="./resource/style.min.css" type="text/css" media="all">
+<meta name="keywords" content="chfyjy's blog">
+<meta name="description" content="chfyjy's blog">
+		
+	<link rel="shortcut icon" href="./resource/chfyjy.png" mce_href="./resource/chfyjy.png" type="image/x-icon">
+	<link rel="stylesheet" href="./resource/style.css" type="text/css" media="all">	
+	<link rel="stylesheet" href="./resource/font-awesome.min.css" media="all">	
+  <link rel="apple-touch-icon" href="./resource/chfyjy.png">
+  <meta name="apple-mobile-web-app-title" content="SayWhy">
+<link rel="stylesheet" type="text/css" href="./resource/prettify.css">
+</head>
+<body style="" data-script-loaded="1">
+<!-- 导航栏 -->
+<div class="container navigation">
+	<div class="row">
+		<div class="col nav">
+			<ul id="index-nav">
+				<li><a href="https://chfyjy.github.io/index.html" data-id="index" title="chfyjy" class="current">首页</a></li>
+				<li><a href="https://github.com/chfyjy/" data-id="index" title="chfyjy" class="current">个人主页</a></li>
+				<li><a href="./../Qtexamples.html" target="_blank" data-id="note" title="Qt示例">Qt示例</a></li>
+				<li><a href="./../resource.html" target="_blank" data-id="note" title="资源">资源</a></li>
+				<li><a href="./../blog.html" target="_blank" data-id="note" title="博客">博客</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--  内容  -->
+<div class="container main">
+	
+<div class="row">
+	<div class="col middle-column-home">
+	    <div class="codelist codelist-desktop cate1">
+            <h2><i class="fa fa-list"></i>Qt线程池的简单使用</h2>
+            <h3>简介</h3>
+			<p>以下是一个用于文件复制的简单线程池,一并使用了事件循环来防止界面卡死,实际效果就是在拷贝大文件,多文件时还是会卡死.效果并不算好.</p>
+            <h3>声明</h3>
+			<p>class CopyTask : public QObject, public QRunnable</p>
+			<p>{</p>
+			<p>Q_OBJECT</p>
+			<br>
+			<p>public:</p>
+			<p>CopyTask(const QString& a, const QString& b)</p>
+			<p>{</p>
+			<p>oldfilename = a;</p>
+			<p>newfilename = b;</p>
+			<p>}</p>
+			<p>~CopyTask()</p>
+			<p>{}</p>
+			<p>protected:</p>
+			<p>void run()</p>
+			<p>{</p>
+			<p>QFile::copy(oldfilename,newfilename);</p>
+			<p>QCoreApplication::processEvents(QEventLoop::AllEvents, 100);</p>
+			<p>}</p>
+			<br>
+			<p>signals:</p>
+			<p>private:</p>
+			<p>QString oldfilename,newfilename;</p>
+			<p>};</p>
+			<h3>定义变量</h3>
+			<p>QThreadPool *copytPool;</p>
+			<h3>初始化</h3>
+			<p>copytPool = new QThreadPool(this);</p>
+			<p>copytPool->setMaxThreadCount(5);//设置最大的活跃线程数</p>
+			<h3>使用</h3>
+			<p>copytPool->start(new CopyTask(QString("aaa.dll"), QString("bbb.dll")));</p>
+			<h3>也可参看</h3>
+			<li><a href="https://github.com/chfyjy/QtWindeploy" target="_blank" data-id="note" title="Qt windows 软件部署">https://github.com/chfyjy/QtWindeploy</a></li>						
+         </div>
+         
+		
+</div>
+</div>
+</div>
+
+<br>
+<!-- 底部 -->
+<style>
+.footer{
+    height:2px;
+    background:#96b97d;
+    width:100%;
+    position:fixed;
+    bottom:0;
+    left:0;
+}
+</style>
+<div class="footer"></div>
+</body></html>
