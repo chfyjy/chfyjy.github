@@ -1,0 +1,58 @@
+A
+animation 动画
+architecture 体系架构
+approved 经核准的,批准同意
+assume 假设
+B
+bounce 弹跳 上下跃起
+C
+concept 概念
+complex 复杂的,合成的
+comprehensive 广泛的 全面的
+codec 编解码器
+charset 字符集
+
+D
+derive from 由...起源,取自,派生
+de-facto 事实上的
+draft 起草 制定 草稿
+E
+easing curve 缓和曲线 缓动曲线
+excellent 优秀的 杰出的
+
+F
+framework 框架
+for instance 比如
+forward 发送 
+fine-tuning 微调
+
+G
+govern 管理 统治
+gurus 权威 专家 大师
+
+I
+interpolation 插值,内插法
+identical 与什么相同
+L
+legacy 遗留 遗产
+
+M
+mentioned 提及的,提到的
+
+O
+overview 概述
+
+P
+parallel 平行的
+periodically 周期性的,定期的
+pioneer 开发 拓荒 先驱
+
+S
+smooth 平滑的 流畅的
+situated 位于....的
+subsequently 随后
+superseded 被替代的
+summary 摘要 概要 概览
+
+T
+transition 转换 过渡
